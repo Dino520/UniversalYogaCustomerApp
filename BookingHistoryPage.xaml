@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UniversalYogaCustomerApp.BookingHistoryPage"
+             Title="Booking History">
+
+    <StackLayout Padding="10">
+        <CollectionView x:Name="historyListView">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Padding="10">
+                        <Label Text="{Binding Type}" FontSize="20" FontAttributes="Bold"/>
+                        <Label Text="{Binding Day}, {Binding Time}" FontSize="16"/>
+                        <Label Text="{Binding Email}" FontSize="14"/>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+</ContentPage>

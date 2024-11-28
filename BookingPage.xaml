@@ -1,0 +1,18 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UniversalYogaCustomerApp.BookingPage"
+             Title="Booking Page">
+
+    <StackLayout Padding="10">
+        <CollectionView x:Name="bookingListView">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Padding="10">
+                        <Label Text="{Binding Type}" FontSize="20" FontAttributes="Bold"/>
+                        <Label Text="{Binding Day}, {Binding Time}" FontSize="16"/>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+</ContentPage>
